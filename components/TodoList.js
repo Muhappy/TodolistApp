@@ -3,8 +3,8 @@ import { StyleSheet, Text, View } from "react-native";
 import colors from "../colors";
 
 export default function TodoList({list}) {
-    const completedCount = list.todos.filter(todo => todo.completed).length;
-    const remainingCount = list.todos.length - completedCount;
+    const completedCount = list.todos ? list.todos.filter(todo => todo.completed).length : 0;
+    const remainingCount = list.todos ? list.todos.length - completedCount : 0;
 
 
     return (
